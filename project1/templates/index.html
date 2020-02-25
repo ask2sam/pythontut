@@ -11,13 +11,16 @@
 
     
     {% block content %}
+     
 
     <h1>Hello {{ name }}</h1>
-    <h1>Tcs</h1>
 
-    <form action="add">
-        Enter 1st number : <input type="number" name="num1">
-        Enter 2nd number : <input type="number" name="num2">
+    <form action="add" method="post">
+         {% csrf_token %}
+
+        Enter 1st number : <input type="number" name="num1"><br><br>
+        Enter 2nd number : <input type="number" name="num2"><br>
+        <br>
         <input type="submit">
     </form>
 
